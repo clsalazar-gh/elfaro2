@@ -1,0 +1,256 @@
+/* ESTILOS GENERALES DEL SITIO   */
+
+body {
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #F5F5F5;
+    color: #000000;
+    min-height: 100vh;
+}
+
+/* ENCABEZADO (LOGO + TITULO)    */
+
+header {
+    background-color: #153A5B;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 20px;
+}
+
+header img {
+    display: block;
+    margin: 0 auto 10px;
+}
+
+header h1 {
+    margin: 0;
+    color: #FFFFFF;
+    font-size: 36px;
+}
+
+header p {
+    margin: 5px 0 0;
+    font-size: 16px;
+}
+
+/* MENU DE NAVEGACION            */
+
+nav {
+    background-color: #C81121;
+    text-align: center;
+    padding: 12px;
+}
+
+nav a {
+    color: #FFFFFF;
+    text-decoration: underline;
+    margin: 0 15px;
+    font-weight: normal;
+    font-size: 16px;
+}
+
+nav a:hover {
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* CONTENIDO PRINCIPAL           */
+
+main {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 25px 20px;
+    min-height: 70vh;
+}
+
+/* SECCIONES GENERALES           */
+
+section {
+    background-color: #FFFFFF;
+    padding: 25px;
+    margin-bottom: 30px;
+    border-left: 5px solid #2E8CCF;
+    box-sizing: border-box;
+}
+
+/* TITULOS GENERALES             */
+
+h2 {
+    color: #153A5B;
+    margin-top: 0;
+}
+
+h3 {
+    color: #C81121;
+}
+
+/* SECCION PRINCIPAL / PORTADA   */
+
+#inicio h2 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 54px;
+    line-height: 1.2;
+    color: #000000;
+    margin-bottom: 15px;
+}
+
+#inicio p {
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+/* PORTADAS INTERNAS (SECCIONES) */
+
+.portada-seccion h2 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 54px;
+    line-height: 1.1;
+    color: #000000;
+    margin: 0 0 15px 0;
+    text-transform: uppercase;
+}
+
+.portada-seccion p {
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+/* CONTENEDOR DE NOTICIAS EN GRILLA */
+
+.grilla-noticias {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    align-items: start;
+}
+
+/* NOTICIAS EN FORMATO EDITORIAL */
+
+.noticia:hover {
+    background-color: #000000;
+}
+
+.noticia:hover h3,
+.noticia:hover .categoria,
+.noticia:hover .resumen {
+    color: #FFFFFF;
+}
+
+.noticia {
+    background-color: #FFFFFF;
+    padding: 22px 10px 25px 10px;
+    margin-bottom: 30px;
+    border-top: 2px solid #000000;
+    border-left: none;
+}
+
+
+
+.categoria {
+    font-size: 14px;
+    font-weight: bold;
+    color: #000000;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+    letter-spacing: 0.5px;
+}
+
+.noticia h3 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 42px;
+    line-height: 1.2;
+    color: #000000;
+    margin: 0 0 15px 0;
+}
+
+.resumen {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #222222;
+    max-width: 950px;
+    margin: 0;
+}
+
+/* MULTIMEDIA                    */
+
+video,
+audio {
+    display: block;
+    margin-top: 12px;
+    max-width: 100%;
+}
+
+#multimedia h3 {
+    color: #153A5B;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+/* PIE DE PAGINA                 */
+
+footer {
+    background-color: #C9D2D0;
+    color: #31231E;
+    text-align: center;
+    padding: 15px;
+    font-size: 14px;
+}
+
+/* AJUSTES RESPONSIVOS BASICOS   */
+
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 30px;
+    }
+
+    #inicio h2,
+    .noticia h3 {
+        font-size: 30px;
+    }
+
+    .resumen,
+    #inicio p {
+        font-size: 16px;
+    }
+
+    .portada-seccion h2 {
+        font-size: 30px;
+    }
+
+    nav a {
+        display: inline-block;
+        margin: 6px 10px;
+    }
+
+    main {
+        padding: 20px 15px;
+    }
+
+    section {
+        padding: 15px;
+    }
+
+    .grilla-noticias {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+/* IMAGEN PRINCIPAL              */
+
+.imagen-principal {
+    width: 90%;
+    max-height: 400px;
+    object-fit: cover;
+    margin: 15px 0 20px 0;
+}
+
+/* IMAGENES DE NOTICIAS          */
+
+.imagen-noticia {
+    width: 90%;
+    max-height: 250px;
+    object-fit: cover;
+    margin: 10px 0 15px 0;
+}

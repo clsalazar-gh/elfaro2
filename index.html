@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <!-- Configuración general del documento -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Faro - Inicio</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <!-- Enlace a la hoja de estilos -->
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body>
+
+    <!-- Encabezado del sitio: logo, nombre del periódico y descripción -->
+
+    <header>
+        <img src="img/logo_el_faro.png" alt="Logotipo del periódico El Faro" width="120">
+        <h1>El Faro</h1>
+        <p>Edicion Web</p>
+    </header>
+
+    <!-- Menú de navegación principal del sitio -->
+
+    <nav>
+        <a href="index.html">Inicio</a>
+        <a href="deporte.html">Deporte</a>
+        <a href="negocios.html">Negocios</a>
+    </nav>
+
+    <!-- Contenido principal de la página -->
+
+    <main>
+
+        <!-- Sección de portada con noticia principal -->
+
+        <section id="inicio">
+            <h2 id="titular-principal">COMUNIDAD LOCAL IMPULSA MEJORAS EN ESPACIOS PUBLICOS</h2>
+            <img src="img/portada.jpg" alt="Imagen principal de la noticia" class="imagen-principal">
+
+            <!-- Información de la noticia destacada -->
+
+            <p><strong>Categoría:</strong> Actualidad</p>
+            <p>
+                Vecinos y autoridades locales iniciaron un plan de recuperación de plazas y zonas
+                comunitarias, con el objetivo de mejorar la seguridad y fomentar la vida en comunidad.
+            </p>
+           
+        </section>
+
+        <!-- Sección de noticias generales en formato editorial -->
+
+        <section id="noticias-generales">
+            <h2>Noticias generales</h2>
+
+            <div class="grilla-noticias">
+
+            <!-- Artículo 1 -->
+            
+            <article class="noticia">
+                <p class="categoria">ACTUALIDAD</p>
+                <h3>Municipio inaugura nueva feria barrial para impulsar el comercio local</h3>
+                <img src="img/n1.jpg" alt="Imagen noticia 1" class="imagen-noticia">
+                <p class="resumen">
+                    La nueva feria reúne a emprendedores de distintos sectores de la comuna y busca
+                    fortalecer la economía local, además de generar un espacio permanente de encuentro
+                    entre vecinos, productores y autoridades.
+                </p>
+            </article>
+
+            <!-- Artículo 2 -->
+
+            <article class="noticia">
+                <p class="categoria">CULTURA</p>
+                <h3>Estudiantes participan en jornada artística con foco en identidad local</h3>
+                <img src="img/n2.jpg" alt="Imagen noticia 2" class="imagen-noticia">
+                <p class="resumen">
+                    Diversos establecimientos educacionales desarrollaron actividades culturales y
+                    presentaciones artísticas orientadas a reforzar el valor de la historia, la
+                    creatividad y la participación de la comunidad escolar.
+                </p>
+            </article>
+
+            <!-- Artículo 3 -->
+
+            <article class="noticia">
+                <p class="categoria">MEDIOAMBIENTE</p>
+                <h3>Campaña de reciclaje amplía cobertura con nuevos puntos limpios en la comuna</h3>
+                <img src="img/n3.jpg" alt="Imagen noticia 3" class="imagen-noticia">
+                <p class="resumen">
+                    El programa municipal incorporó nuevos espacios de reciclaje para facilitar la
+                    separación de residuos y promover hábitos sustentables entre vecinos, colegios y
+                    organizaciones territoriales.
+                </p>
+            </article>
+
+            </div>
+
+        </section>
+
+        <!-- Sección multimedia con video y audio -->
+
+        <section id="multimedia">
+            <h2>Contenido multimedia</h2>
+
+            <!-- Video del sitio -->
+
+            <h3>Video destacado</h3>
+            <p class="resumen">
+                    Limpieza de playas en Dinamarca genera polémica.
+                </p>
+            <video width="480" controls>
+                <source src="video/portada_noticias.mp4" type="video/mp4">
+                Tu navegador no soporta video.
+            </video>
+
+            <!-- Audio del sitio -->
+
+            <h3>Audio informativo</h3>
+            <p class="resumen">
+                    Alza histórica de los combustibles.
+                </p>
+            <audio controls>
+                <source src="audio/resumen_noticias.mp3" type="audio/mpeg">
+                Tu navegador no soporta audio.
+            </audio>
+        </section>
+
+    </main>
+
+    <!-- Pie de página del sitio -->
+
+    <footer>
+        <p>© 2026 El Faro - Edición WEB</p>
+    </footer>
+
+    <!-- Enlace al archivo JavaScript -->
+
+    <script src="js/script.js"></script>
+
+</body>
+</html>
