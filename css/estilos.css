@@ -140,7 +140,7 @@ h3 {
 .noticia {
     background-color: #FFFFFF;
     padding: 22px 10px 25px 10px;
-    margin-bottom: 30px;
+    margin-bottom: 0;
     border-top: 2px solid #000000;
     border-left: none;
 }
