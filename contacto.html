@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <!-- Configuración general del documento -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Faro - Contacto</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <!-- Bulma -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+
+    <!-- Enlace a la hoja de estilos -->
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body>
+
+    <!-- Encabezado del sitio; logo y menú principal -->
+
+    <header class="section pb-2 encabezado-principal">
+        <div class="container">
+            <div class="columns is-vcentered encabezado-superior">
+
+                <!-- Marca del sitio -->
+                <div class="column is-narrow">
+                    <div class="marca-sitio">
+                        <img src="img/logo_el_faro.png" alt="Logotipo del periódico El Faro" class="logo-faro">
+                    </div>
+                </div>
+
+                <!-- Menú de navegación principal del sitio -->
+                <div class="column">
+                    <nav class="navbar menu-superior" role="navigation" aria-label="main navigation">
+                        <div class="navbar-menu is-active">
+                            <div class="navbar-end">
+                                <a class="navbar-item" href="index.html">Inicio</a>
+                                <a class="navbar-item" href="deporte.html">Deportes</a>
+                                <a class="navbar-item" href="negocios.html">Negocios</a>
+
+                                <span class="navbar-item separador-menu">|</span>
+                                <a class="navbar-item acceso-icono" href="https://www.meteored.cl/" target="_blank" aria-label="Clima">☀</a>
+                                <a class="navbar-item acceso-icono" href="https://www.bcentral.cl/" target="_blank" aria-label="Indicadores">$</a>
+                                <a class="navbar-item acceso-icono" href="https://www.google.com/maps" target="_blank" aria-label="Mapas">📍</a>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+
+            </div>
+        </div>
+    </header>
+
+    <!-- Barra indicadores y titulares -->
+
+    <section class="py-0 barra-indicadores-externa">
+        <div class="container">
+
+            <!-- Línea superior de indicadores -->
+            <div class="barra-indicadores">
+                <div id="barra-avisos" class="is-size-7">
+                    <strong>Dólar: $970</strong> |
+                    UF: $36.280,60 |
+                    ⛅ Santiago: 20°C |
+                    Onomástico: Gonzalo |
+                    <span id="fecha-hora"></span>
+                </div>
+            </div>
+
+            <!-- Línea inferior de titulares -->
+            <div class="barra-titulares">
+                El Faro habilita un nuevo canal de comunicación para recibir consultas, comentarios y mensajes de la comunidad lectora.
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Contenido principal de la página -->
+
+    <main>
+
+        <!-- Portada principal de contacto -->
+        <section id="portada-contacto" class="section pt-2">
+            <div class="container">
+                <article class="card">
+                    <div class="card-content">
+                        <p class="is-size-7 has-text-weight-bold mb-2">CONTACTO</p>
+                        <h2 id="titular-principal" class="title is-2 mb-4">
+                            Canal de comunicación con la comunidad y los lectores
+                        </h2>
+                        <p>
+                            En esta sección los usuarios pueden enviar mensajes, comentarios o consultas al medio,
+                            manteniendo un espacio ordenado de interacción y publicación de aportes.
+                        </p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Sección de formulario y mensajes publicados -->
+        <section id="seccion-contacto" class="section pt-0">
+            <div class="container">
+                <div class="columns is-variable is-5">
+
+                    <!-- Formulario de contacto -->
+                    <div class="column is-5">
+                        <div class="box">
+                            <h2 class="title is-3 mb-4">Formulario de contacto</h2>
+
+                            <form id="form-contacto">
+
+                                <!-- Campo nombre -->
+                                <div class="field">
+                                    <label class="label" for="nombre-contacto">Nombre</label>
+                                    <div class="control">
+                                        <input class="input" type="text" id="nombre-contacto" name="nombre-contacto" placeholder="Ingrese su nombre">
+                                    </div>
+                                </div>
+
+                                <!-- Campo mensaje -->
+                                <div class="field">
+                                    <label class="label" for="mensaje-contacto">Mensaje</label>
+                                    <div class="control">
+                                        <textarea class="textarea" id="mensaje-contacto" name="mensaje-contacto" rows="6" placeholder="Escriba su mensaje"></textarea>
+                                    </div>
+                                </div>
+
+                                <!-- Botón de envío -->
+                                <div class="field">
+                                    <div class="control">
+                                        <button class="button is-dark" type="button" id="btn-enviar-contacto">
+                                            Enviar mensaje
+                                        </button>
+                                    </div>
+                                </div>
+
+                            </form>
+                        </div>
+                    </div>
+
+                    <!-- Mensajes publicados -->
+                    <div class="column is-7">
+                        <div class="box">
+                            <div class="is-flex is-justify-content-space-between is-align-items-center mb-4">
+                                <h2 class="title is-3 mb-0">Mensajes publicados</h2>
+                                <p class="contador-articulos mb-0">
+                                    Participación de lectores
+                                </p>
+                            </div>
+
+                            <div id="lista-mensajes">
+                                <!-- Aquí se cargan dinámicamente los mensajes -->
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer ampliado -->
+    <footer class="footer footer-el-faro">
+        <div class="container">
+            <div class="columns is-variable is-5">
+
+                <div class="column is-4">
+                    <h3 class="footer-titulo">El Faro</h3>
+                    <p>
+                        Diario digital orientado a informar sobre actualidad, deporte, negocios y participación
+                        comunitaria, servicios y más!
+                    </p>
+                </div>
+
+                <div class="column is-3">
+                    <h3 class="footer-titulo">Secciones</h3>
+                    <ul class="footer-lista">
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="deporte.html">Deporte</a></li>
+                        <li><a href="negocios.html">Negocios</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                    </ul>
+                </div>
+
+                <div class="column is-3">
+                    <h3 class="footer-titulo">Accesos rápidos</h3>
+                    <ul class="footer-lista">
+                        <li><a href="https://www.meteored.cl/" target="_blank">Clima</a></li>
+                        <li><a href="https://www.bcentral.cl/" target="_blank">Indicadores</a></li>
+                        <li><a href="https://www.google.com/maps" target="_blank">Mapas</a></li>
+                    </ul>
+                </div>
+
+                <div class="column is-2">
+                    <h3 class="footer-titulo">Contacto</h3>
+                    <p>contacto@elfaro.cl</p>
+                    <p>+56 9 1234 5678</p>
+                </div>
+            </div>
+
+            <hr class="footer-separador">
+
+            <div class="has-text-centered">
+                <p>© 2026 El Faro - Edición Web. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+
+</body>
+</html>

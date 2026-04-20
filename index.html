@@ -10,135 +10,386 @@
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
 
+    <!-- Bulma -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+
     <!-- Enlace a la hoja de estilos -->
     <link rel="stylesheet" href="css/estilos.css">
 </head>
 
 <body>
 
-    <!-- Encabezado del sitio: logo, nombre del periódico y descripción -->
+    <!-- Encabezado del sitio; logo y menú principal -->
 
-    <header>
-        <img src="img/logo_el_faro.png" alt="Logotipo del periódico El Faro" width="120">
-        <h1>El Faro</h1>
-        <p>Edicion Web</p>
+    <header class="section pb-2 encabezado-principal">
+        <div class="container">
+            <div class="columns is-vcentered encabezado-superior">
+
+                <!-- Marca del sitio -->
+                <div class="column is-narrow">
+                    <div class="marca-sitio">
+                        <img src="img/logo_el_faro.png" alt="Logotipo del periódico El Faro" class="logo-faro">
+                    </div>
+                </div>
+
+                <!-- Menú de navegación principal del sitio -->
+                <div class="column">
+                    <nav class="navbar menu-superior" role="navigation" aria-label="main navigation">
+                        <div class="navbar-menu is-active">
+                            <div class="navbar-end">
+                                <a class="navbar-item" href="index.html">Inicio</a>
+                                <a class="navbar-item" href="deporte.html">Deportes</a>
+                                <a class="navbar-item" href="negocios.html">Negocios</a>
+
+                                <span class="navbar-item separador-menu">|</span>
+                                <a class="navbar-item acceso-icono" href="https://www.meteored.cl/" target="_blank" aria-label="Clima">☀</a>
+                                <a class="navbar-item acceso-icono" href="https://www.bcentral.cl/" target="_blank" aria-label="Indicadores">$</a>
+                                <a class="navbar-item acceso-icono" href="https://www.google.com/maps" target="_blank" aria-label="Mapas">📍</a>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+
+            </div>
+        </div>
     </header>
 
-    <!-- Menú de navegación principal del sitio -->
+    <!-- Barra indicadores y titulares -->
 
-    <nav>
-        <a href="index.html">Inicio</a>
-        <a href="deporte.html">Deporte</a>
-        <a href="negocios.html">Negocios</a>
-    </nav>
+    <section class="py-0 barra-indicadores-externa">
+        <div class="container">
+
+            <!-- Línea superior de indicadores -->
+            <div class="barra-indicadores">
+                <div id="barra-avisos" class="is-size-7">
+                    <strong>Dólar: $970</strong> |
+                    UF: $36.280,60 |
+                    ⛅ Santiago: 20°C |
+                    Onomástico: Gonzalo |
+                    <span id="fecha-hora"></span>
+                </div>
+            </div>
+
+            <!-- Línea inferior de titulares -->
+            <div class="barra-titulares">
+                Banco Central mantiene tasa de interés en 8,25%. Ministro de Salud anuncia plan de invierno para 2026. Inflación mensual se modera a 0,3% en marzo.
+            </div>
+
+        </div>
+    </section>
 
     <!-- Contenido principal de la página -->
 
     <main>
 
-        <!-- Sección de portada con noticia principal -->
+        <!-- Sección editorial principal de portada en esquema 8/4 -->
+        <section id="portada-editorial" class="section pt-2">
+            <div class="container">
 
-        <section id="inicio">
-            <h2 id="titular-principal">COMUNIDAD LOCAL IMPULSA MEJORAS EN ESPACIOS PUBLICOS</h2>
-            <img src="img/portada.jpg" alt="Imagen principal de la noticia" class="imagen-principal">
+                <!-- Contenedor principal en columnas -->
+                <div class="columns is-variable is-5">
 
-            <!-- Información de la noticia destacada -->
+                    <!-- BLOQUE IZQUIERDO: contenido principal del sitio -->
+                    <div class="column is-8">
 
-            <p><strong>Categoría:</strong> Actualidad</p>
-            <p>
-                Vecinos y autoridades locales iniciaron un plan de recuperación de plazas y zonas
-                comunitarias, con el objetivo de mejorar la seguridad y fomentar la vida en comunidad.
-            </p>
-           
-        </section>
+                        <!-- Noticia principal destacada -->
+                        <section id="inicio" class="mb-5">
+                            <article class="card">
+                                <div class="card-content">
+                                    <p class="is-size-7 has-text-weight-bold mb-2">ACTUALIDAD</p>
+                                    <h2 id="titular-principal" class="title is-1 mb-4">
+                                        COMUNIDAD LOCAL IMPULSA MEJORAS EN ESPACIOS PÚBLICOS
+                                    </h2>
+                                </div>
 
-        <!-- Sección de noticias generales en formato editorial -->
+                                <div class="card-image">
+                                    <figure class="image">
+                                        <img src="img/portada.jpg" alt="Imagen principal de la noticia" class="imagen-principal">
+                                    </figure>
+                                </div>
 
-        <section id="noticias-generales">
-            <h2>Noticias generales</h2>
+                                <div class="card-content pt-4">
+                                    <p class="mb-3">
+                                        Vecinos y autoridades locales iniciaron un plan de recuperación de plazas y zonas
+                                        comunitarias, con el objetivo de mejorar la seguridad y fomentar la vida en comunidad.
+                                    </p>
+                                </div>
+                            </article>
+                        </section>
 
-            <div class="grilla-noticias">
+                        <!-- Noticias generales principales -->
+                        <section id="noticias-generales">
+                            <div class="is-flex is-justify-content-space-between is-align-items-center mb-4">
+                                <h2 class="title is-3 mb-0">Noticias generales</h2>
+                                <p class="contador-articulos mb-0">
+                                    Artículos principales: <span id="total-articulos">0</span>
+                                </p>
+                            </div>
 
-            <!-- Artículo 1 -->
-            
-            <article class="noticia">
-                <p class="categoria">ACTUALIDAD</p>
-                <h3>Municipio inaugura nueva feria barrial para impulsar el comercio local</h3>
-                <img src="img/n1.jpg" alt="Imagen noticia 1" class="imagen-noticia">
-                <p class="resumen">
-                    La nueva feria reúne a emprendedores de distintos sectores de la comuna y busca
-                    fortalecer la economía local, además de generar un espacio permanente de encuentro
-                    entre vecinos, productores y autoridades.
-                </p>
-            </article>
+                            <!-- Grilla de noticias principales en dos columnas -->
+                            <div class="columns is-multiline">
 
-            <!-- Artículo 2 -->
+                                <!-- Artículo principal 1 -->
+                                <div class="column is-6">
+                                    <article class="card noticia noticia-principal h-100">
+                                        <div class="card-content pb-2">
+                                            <p class="categoria is-size-7 has-text-weight-bold mb-2">ACTUALIDAD</p>
+                                            <h3 class="title is-2 mb-4">
+                                                Municipio inaugura nueva feria barrial para impulsar el comercio local
+                                            </h3>
+                                        </div>
 
-            <article class="noticia">
-                <p class="categoria">CULTURA</p>
-                <h3>Estudiantes participan en jornada artística con foco en identidad local</h3>
-                <img src="img/n2.jpg" alt="Imagen noticia 2" class="imagen-noticia">
-                <p class="resumen">
-                    Diversos establecimientos educacionales desarrollaron actividades culturales y
-                    presentaciones artísticas orientadas a reforzar el valor de la historia, la
-                    creatividad y la participación de la comunidad escolar.
-                </p>
-            </article>
+                                        <div class="card-image">
+                                            <figure class="image">
+                                                <img src="img/n1.jpg" alt="Imagen noticia 1" class="imagen-noticia">
+                                            </figure>
+                                        </div>
 
-            <!-- Artículo 3 -->
+                                        <div class="card-content pt-4">
+                                            <p class="resumen">
+                                                La nueva feria reúne a emprendedores de distintos sectores de la comuna y busca
+                                                fortalecer la economía local, además de generar un espacio permanente de encuentro
+                                                entre vecinos, productores y autoridades.
+                                            </p>
+                                        </div>
+                                    </article>
+                                </div>
 
-            <article class="noticia">
-                <p class="categoria">MEDIOAMBIENTE</p>
-                <h3>Campaña de reciclaje amplía cobertura con nuevos puntos limpios en la comuna</h3>
-                <img src="img/n3.jpg" alt="Imagen noticia 3" class="imagen-noticia">
-                <p class="resumen">
-                    El programa municipal incorporó nuevos espacios de reciclaje para facilitar la
-                    separación de residuos y promover hábitos sustentables entre vecinos, colegios y
-                    organizaciones territoriales.
-                </p>
-            </article>
+                                <!-- Artículo principal 2 -->
+                                <div class="column is-6">
+                                    <article class="card noticia noticia-principal h-100">
+                                        <div class="card-content pb-2">
+                                            <p class="categoria is-size-7 has-text-weight-bold mb-2">CULTURA</p>
+                                            <h3 class="title is-2 mb-4">
+                                                Estudiantes participan en jornada artística con foco en identidad local
+                                            </h3>
+                                        </div>
 
+                                        <div class="card-image">
+                                            <figure class="image">
+                                                <img src="img/n2.jpg" alt="Imagen noticia 2" class="imagen-noticia">
+                                            </figure>
+                                        </div>
+
+                                        <div class="card-content pt-4">
+                                            <p class="resumen">
+                                                Diversos establecimientos educacionales desarrollaron actividades culturales y
+                                                presentaciones artísticas orientadas a reforzar el valor de la historia, la
+                                                creatividad y la participación de la comunidad escolar.
+                                            </p>
+                                        </div>
+                                    </article>
+                                </div>
+
+                            </div>
+                        </section>
+                    </div>
+
+                    <!-- BLOQUE DERECHO: noticias secundarias -->
+                    <div class="column is-4">
+                        <section id="noticias-secundarias">
+                            <h2 class="title is-4 mb-4">Más noticias</h2>
+
+                            <!-- Grilla lateral en una sola columna para mejorar legibilidad -->
+                            <div class="columns is-multiline columnas-secundarias">
+
+                                <!-- Noticia secundaria 1 -->
+                                <div class="column is-12">
+                                    <article class="noticia-secundaria">
+                                        <p class="categoria is-size-7 has-text-weight-bold mb-1">MEDIOAMBIENTE</p>
+                                        <h3 class="title is-6 mb-2">
+                                            Campaña de reciclaje amplía cobertura con nuevos puntos limpios...
+                                        </h3>
+                                        <p class="resumen is-size-7">
+                                            El programa municipal incorporó nuevos espacios de reciclaje para facilitar
+                                            la separación de residuos.
+                                        </p>
+                                    </article>
+                                </div>
+
+                                <!-- Noticia secundaria 2 -->
+                                <div class="column is-12">
+                                    <article class="noticia-secundaria">
+                                        <p class="categoria is-size-7 has-text-weight-bold mb-1">COMUNIDAD</p>
+                                        <h3 class="title is-6 mb-2">
+                                            Vecinos participan en jornada de limpieza y recuperación barrial...
+                                        </h3>
+                                        <p class="resumen is-size-7">
+                                            La actividad reunió a organizaciones sociales y residentes del sector.
+                                        </p>
+                                    </article>
+                                </div>
+
+                                <!-- Noticia secundaria 3 -->
+                                <div class="column is-12">
+                                    <article class="noticia-secundaria">
+                                        <p class="categoria is-size-7 has-text-weight-bold mb-1">SERVICIOS</p>
+                                        <h3 class="title is-6 mb-2">
+                                            Municipio anuncia mejoras en luminarias y espacios recreativos...
+                                        </h3>
+                                        <p class="resumen is-size-7">
+                                            Las intervenciones consideran mayor seguridad y mejor uso comunitario.
+                                        </p>
+                                    </article>
+                                </div>
+
+                                <!-- Noticia secundaria 4 -->
+                                <div class="column is-12">
+                                    <article class="noticia-secundaria">
+                                        <p class="categoria is-size-7 has-text-weight-bold mb-1">ACTUALIDAD</p>
+                                        <h3 class="title is-6 mb-2">
+                                            Organizaciones locales coordinan nuevas actividades de participación...
+                                        </h3>
+                                        <p class="resumen is-size-7">
+                                            Se busca fortalecer el vínculo entre instituciones y comunidad.
+                                        </p>
+                                    </article>
+                                </div>
+
+                            </div>
+                        </section>
+                    </div>
+
+                </div>
             </div>
-
         </section>
 
         <!-- Sección multimedia con video y audio -->
-
         <section id="multimedia">
             <h2>Contenido multimedia</h2>
 
             <!-- Video del sitio -->
-
             <h3>Video destacado</h3>
             <p class="resumen">
-                    Limpieza de playas en Dinamarca genera polémica.
-                </p>
+                Limpieza de playas en Dinamarca genera polémica.
+            </p>
             <video width="480" controls>
                 <source src="video/portada_noticias.mp4" type="video/mp4">
                 Tu navegador no soporta video.
             </video>
 
             <!-- Audio del sitio -->
-
             <h3>Audio informativo</h3>
             <p class="resumen">
-                    Alza histórica de los combustibles.
-                </p>
+                Alza histórica de los combustibles.
+            </p>
             <audio controls>
                 <source src="audio/resumen_noticias.mp3" type="audio/mpeg">
                 Tu navegador no soporta audio.
             </audio>
         </section>
 
+        <!-- Formulario para agregar artículos dinámicamente -->
+        <!-- Se incorpora un campo para definir si el artículo será principal o secundario -->
+        <section id="formulario-articulos" class="section pt-5">
+            <div class="container">
+                <div class="box">
+
+                    <!-- Título de la sección -->
+                    <h2 class="title is-3 mb-4">Agregar artículo</h2>
+
+                    <!-- Formulario principal -->
+                    <form id="form-agregar-articulo">
+
+                        <!-- Campo para seleccionar el tipo de artículo -->
+                        <div class="field">
+                            <label class="label" for="tipo-articulo">Tipo de artículo</label>
+                            <div class="control">
+                                <div class="select is-fullwidth">
+                                    <select id="tipo-articulo" name="tipo-articulo">
+                                        <option value="principal">Principal</option>
+                                        <option value="secundario">Secundario</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Campo título -->
+                        <div class="field">
+                            <label class="label" for="titulo-articulo">Título del artículo</label>
+                            <div class="control">
+                                <input class="input" type="text" id="titulo-articulo" name="titulo-articulo">
+                            </div>
+                        </div>
+
+                        <!-- Campo descripción -->
+                        <div class="field">
+                            <label class="label" for="descripcion-articulo">Descripción del artículo</label>
+                            <div class="control">
+                                <textarea class="textarea" id="descripcion-articulo" name="descripcion-articulo" rows="5"></textarea>
+                            </div>
+                        </div>
+
+                        <!-- Campo imagen -->
+                        <div class="field">
+                            <label class="label" for="imagen-articulo">Fotografía del artículo</label>
+                            <div class="control">
+                                <input class="input" type="file" id="imagen-articulo" name="imagen-articulo" accept="image/*">
+                            </div>
+                        </div>
+
+                        <!-- Botón de envío -->
+                        <div class="field">
+                            <div class="control">
+                                <button class="button is-dark" type="button" id="btn-agregar-articulo">
+                                    Agregar artículo
+                                </button>
+                            </div>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </section>
+
     </main>
 
-    <!-- Pie de página del sitio -->
+    <!-- Footer ampliado -->
+    <footer class="footer footer-el-faro">
+        <div class="container">
+            <div class="columns is-variable is-5">
 
-    <footer>
-        <p>© 2026 El Faro - Edición WEB</p>
+                <div class="column is-4">
+                    <h3 class="footer-titulo">El Faro</h3>
+                    <p>
+                        Diario digital orientado a informar sobre actualidad, deporte, negocios y participación
+                        comunitaria, servicios y más!
+                    </p>
+                </div>
+
+                <div class="column is-3">
+                    <h3 class="footer-titulo">Secciones</h3>
+                    <ul class="footer-lista">
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="deporte.html">Deporte</a></li>
+                        <li><a href="negocios.html">Negocios</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                    </ul>
+                </div>
+
+                <div class="column is-3">
+                    <h3 class="footer-titulo">Accesos rápidos</h3>
+                    <ul class="footer-lista">
+                        <li><a href="https://www.meteored.cl/" target="_blank">Clima</a></li>
+                        <li><a href="https://www.bcentral.cl/" target="_blank">Indicadores</a></li>
+                        <li><a href="https://www.google.com/maps" target="_blank">Mapas</a></li>
+                    </ul>
+                </div>
+
+                <div class="column is-2">
+                    <h3 class="footer-titulo">Contacto</h3>
+                    <p>contacto@elfaro.cl</p>
+                    <p>+56 9 1234 5678</p>
+                </div>
+            </div>
+
+            <hr class="footer-separador">
+
+            <div class="has-text-centered">
+                <p>© 2026 El Faro - Edición Web. Todos los derechos reservados.</p>
+            </div>
+        </div>
     </footer>
-
-    <!-- Enlace al archivo JavaScript -->
 
     <script src="js/script.js"></script>
 
